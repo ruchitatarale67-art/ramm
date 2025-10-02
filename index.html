@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Dussehra</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #ffcc70, #ff6f61);
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    button {
+      background: #fff;
+      color: #ff6f61;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      background: #ffefba;
+      transform: scale(1.05);
+    }
+
+    /* Firecracker animation container */
+    .fireworks {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .fireworks img {
+      max-width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 0 40px gold;
+      animation: zoomIn 2s ease;
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.5); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #ffcc70;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    /* Floating diya lights background */
+    .diya {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: gold;
+      border-radius: 50%;
+      box-shadow: 0 0 20px gold, 0 0 40px orange;
+      animation: floatUp 6s infinite ease-in-out;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0.7;}
+      50% { opacity: 1; }
+      100% { transform: translateY(-20vh) scale(1.2); opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating diyas -->
+  <div class="diya" style="left:10%; animation-delay: 0s;"></div>
+  <div class="diya" style="left:30%; animation-delay: 2s;"></div>
+  <div class="diya" style="left:50%; animation-delay: 4s;"></div>
+  <div class="diya" style="left:70%; animation-delay: 1s;"></div>
+  <div class="diya" style="left:90%; animation-delay: 3s;"></div>
+
+  <h1>✨ Happy Dussehra ✨</h1>
+  <p>Celebrate the victory of good over evil, light over darkness, and wisdom over ignorance.</p>
+
+  <button onclick="showFireworks()">Click to Celebrate 🎆</button>
+
+  <!-- Fireworks popup -->
+  <div class="fireworks" id="fireworks">
+    <img src="C:\Users\Ruchita Tarale\OneDrive\Desktop\dasheraa\dashera.jpg" alt="Firecrackers Celebration">
+    <div class="quote">"Let us burn all our negativities with the effigy of Ravan. Happy Dussehra!"</div>
+  </div>
+
+  <script>
+    function showFireworks() {
+      document.getElementById("fireworks").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
